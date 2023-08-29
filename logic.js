@@ -1,23 +1,31 @@
+/**
+ * the popup and the blur thing
+ */
 const addBtn = document.querySelector(".btn-add");
 const modal = document.querySelector("form");
 const firstField = document.querySelector("#title");
 const container = document.querySelector(".container");
-// const clickElse = document.querySelectorAll("body :not(form, .btn-add)");
 
-// addBtn.addEventListener("click", () => {
-//   modal.style.display = "grid";
-//   container.classList.toggle("modal-open");
-//   firstField.focus();
-//   if (container.classList.contains("modal-open")) {
-//     addBtn.disabled = true;
-//   } else {
-//     addBtn.disabled = false;
-//   }
-// });
+addBtn.addEventListener("click", (e) => {
+  modal.style.display = "grid";
+  container.classList.toggle("modal-open");
+  firstField.focus();
+  addBtn.disabled = true;
+  e.stopPropagation();
+});
 
-// clickElse.forEach((e)=>{
+document.addEventListener("click", (e) => {
+  if (
+    container.classList.contains("modal-open") &&
+    !modal.contains(e.target) &&
+    !addBtn.contains(e.target)
+  ) {
+    modal.style.display = "none";
+    container.classList.toggle("modal-open");
+    addBtn.disabled = false;
+  }
+});
 
-// })
-// document.addEventListener("click", () => {
-//   modal.style.display = "none";
-// });
+/**
+ * adding books
+ */

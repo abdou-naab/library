@@ -52,8 +52,11 @@ section {
   display: flex;
   flex-direction: column;
 }
+section div:first-child {
+  display: flex;
+  justify-content: center;
+}
 section button {
-  align-self: center;
   margin: 1rem 0;
   border: none;
   outline: none;
@@ -64,10 +67,10 @@ section button {
   padding: 0.6rem 0.8rem;
   cursor: pointer;
 }
+
 section div.books-container {
   overflow: auto;
   display: flex;
-  border: 2px solid red;
   flex: 1;
   flex-wrap: wrap;
   gap: 2rem;
@@ -75,7 +78,7 @@ section div.books-container {
   padding: 4px 0;
 }
 article {
-  border: 2px solid black;
+  border: 2px solid var(--black);
   height: 300px;
   width: 230px;
 }
@@ -104,7 +107,7 @@ form * {
 form input {
   border: none;
   outline: none;
-  height: 1.6rem;
+  height: 2rem;
   padding-left: 8px;
   font-family: inherit;
   border-radius: 4px;
