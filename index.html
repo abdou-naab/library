@@ -8,14 +8,45 @@
     <script type="text/javascript" src="logic.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>library</h1>
-      <button>Log in</button>
-    </header>
-    <section>
-      <button class="btn-add-book">+ Add book</button>
-      <div class="books-container"></div>
-    </section>
-    <footer>&#169; 2023 abderrahmane naab</footer>
+    <div class="container">
+      <header>
+        <h1>library</h1>
+        <button>Log in</button>
+      </header>
+      <section>
+        <button class="btn-add">+ Add book</button>
+        <div class="books-container"></div>
+      </section>
+      <footer>&#169; 2023 abderrahmane naab</footer>
+    </div>
+    <form>
+      <h3>Add new book</h3>
+      <input
+        type="text"
+        id="title"
+        placeholder="Title"
+        required
+        maxlength="100"
+      />
+      <input
+        type="text"
+        id="author"
+        placeholder="Author"
+        required
+        maxlength="100"
+      />
+      <input
+        type="number"
+        id="pages"
+        placeholder="Pages"
+        required
+        max="10000"
+      />
+      <div class="is-read">
+        <label for="is-read">Have you read it?</label>
+        <input type="checkbox" id="isRead" />
+      </div>
+      <button class="btn-read" type="submit">Submit</button>
+    </form>
   </body>
 </html>

@@ -6,11 +6,11 @@
   --light-green: #9fff9c;
   --light-red: #ff9c9c;
 }
+
 body {
+  position: relative;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-rows: 6rem 1fr 1.6rem;
   height: 100vh;
 
   background-color: var(--grey);
@@ -18,6 +18,11 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 500;
+}
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 6rem 1fr 1.6rem;
 }
 button:active {
   box-shadow: 1px 1px 1px 1px var(--black);
@@ -46,9 +51,9 @@ footer {
 section {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 section button {
+  align-self: center;
   margin: 1rem 0;
   border: none;
   outline: none;
@@ -61,4 +66,64 @@ section button {
 }
 section div.books-container {
   overflow: auto;
+  display: flex;
+  border: 2px solid red;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 4px 0;
+}
+article {
+  border: 2px solid black;
+  height: 300px;
+  width: 230px;
+}
+
+form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  padding: 1.5rem;
+  border: 0.6rem solid var(--white);
+  border-radius: 8px;
+  grid-template-rows: repeat(6, auto);
+  width: 230px;
+  height: 300px;
+  align-items: center;
+  justify-items: center;
+}
+form * {
+  padding: 0;
+  margin: 0;
+}
+form input {
+  border: none;
+  outline: none;
+  height: 1.6rem;
+  padding-left: 8px;
+  font-family: inherit;
+  border-radius: 4px;
+}
+form button {
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 0.2rem 4rem;
+  border-radius: 4px;
+  background-color: var(--light-green);
+  border: none;
+}
+.is-read {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.modal-open {
+  filter: blur(10px);
 }
