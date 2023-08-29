@@ -1,0 +1,64 @@
+:root {
+  --white: #fffbfb;
+  --grey: #f0eef1;
+  --black: #050505;
+  --red: #ff7070;
+  --light-green: #9fff9c;
+  --light-red: #ff9c9c;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 6rem 1fr 1.6rem;
+  height: 100vh;
+
+  background-color: var(--grey);
+  color: var(--black);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+button:active {
+  box-shadow: 1px 1px 1px 1px var(--black);
+  transform: translateY(3px) translateX(2px);
+}
+header {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 min(4rem, 10%);
+  align-items: center;
+}
+header button {
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section button {
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 6px;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+section div.books-container {
+  overflow: auto;
+}
