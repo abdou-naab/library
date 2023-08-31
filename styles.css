@@ -78,9 +78,25 @@ section div.books-container {
   padding: 4px 0;
 }
 article {
-  border: 2px solid var(--black);
+  box-shadow: 0px 0px 4px 1px var(--black);
+  border-radius: 8px;
   height: 300px;
   width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.container article * {
+  padding: 0;
+  margin: 0;
+}
+.container article button {
+  width: 120px;
+  padding: 0.4rem 1rem;
+}
+.container article button:last-child {
+  background-color: var(--red);
 }
 
 form {
@@ -91,8 +107,10 @@ form {
   transform: translate(-50%, -50%);
   z-index: 3;
 
+  background-color: var(--white);
   padding: 1.5rem;
-  border: 0.6rem solid var(--white);
+  border: none;
+  box-shadow: 0px 0px 33px -4px var(--black);
   border-radius: 8px;
   grid-template-rows: repeat(6, auto);
   width: 230px;
@@ -106,6 +124,7 @@ form * {
 }
 form input {
   border: none;
+  border-bottom: 3px solid var(--grey);
   outline: none;
   height: 2rem;
   padding-left: 8px;
@@ -128,5 +147,5 @@ form button {
 }
 
 .modal-open {
-  filter: blur(10px);
+  filter: contrast(34%) blur(10px);
 }
